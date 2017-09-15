@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T0Y-jE-dce">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Sdo-w3-wft">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T0Y-jE-dce" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WRJ-YE-sUH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KIj-Fu-437" kind="relationship" relationship="rootViewController" id="MJU-NU-NUb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5s2-A8-0x7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="289"/>
+        </scene>
+        <!--Battery Info-->
+        <scene sceneID="rx2-IL-2Lq">
+            <objects>
+                <viewController id="KIj-Fu-437" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Daw-ee-Ym9"/>
+                        <viewControllerLayoutGuide type="bottom" id="JFw-St-hn6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JbE-63-I1T">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ood-wz-ByQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KIj-Fu-437" id="9C8-eh-ccM"/>
+                                    <outlet property="delegate" destination="KIj-Fu-437" id="u9d-c9-VSc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JFw-St-hn6" firstAttribute="top" secondItem="Ood-wz-ByQ" secondAttribute="bottom" id="2Ad-7G-C8i"/>
+                            <constraint firstAttribute="trailing" secondItem="Ood-wz-ByQ" secondAttribute="trailing" id="35m-m2-QnA"/>
+                            <constraint firstItem="Ood-wz-ByQ" firstAttribute="leading" secondItem="JbE-63-I1T" secondAttribute="leading" id="Fjr-Mo-ScR"/>
+                            <constraint firstItem="Ood-wz-ByQ" firstAttribute="top" secondItem="Daw-ee-Ym9" secondAttribute="bottom" constant="-64" id="OEo-oz-ljx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Battery Info" id="rTs-ri-38q"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ood-wz-ByQ" id="gw3-09-vw0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JgO-vO-8lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="282"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="71" id="KGk-i7-Jjw" customClass="BatteryChargeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="437" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battery Charge" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00j-ok-6hb">
+                        <rect key="frame" x="8" y="8" width="116" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJu-WS-1vd">
+                        <rect key="frame" x="337" y="8" width="92" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0o-e4-zsE" customClass="YLProgressBar">
+                        <rect key="frame" x="8" y="37" width="421" height="22"/>
+                        <color key="backgroundColor" red="0.59489071369171143" green="0.74986636638641357" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="hdC-r1-LAu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="topMargin" secondItem="00j-ok-6hb" secondAttribute="top" id="Cds-96-WGp"/>
+                    <constraint firstAttribute="topMargin" secondItem="tJu-WS-1vd" secondAttribute="top" id="Q3D-Ho-9cR"/>
+                    <constraint firstItem="X0o-e4-zsE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Ugj-EY-zXs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tJu-WS-1vd" secondAttribute="trailing" id="Xeh-oE-Sr2"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="00j-ok-6hb" secondAttribute="leading" id="bQ9-Cf-Qkd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="X0o-e4-zsE" secondAttribute="bottom" constant="4" id="cXD-T3-JnS"/>
+                    <constraint firstItem="X0o-e4-zsE" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="j1B-w1-D2o"/>
+                    <constraint firstAttribute="trailing" secondItem="X0o-e4-zsE" secondAttribute="trailing" constant="8" id="vm2-13-YqP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="fieldValue" destination="tJu-WS-1vd" id="d5R-US-cxP"/>
+                <outlet property="progressBar" destination="X0o-e4-zsE" id="0a4-y0-rh2"/>
+            </connections>
+            <point key="canvasLocation" x="676.5" y="418.5"/>
+        </tableViewCell>
+    </objects>
+</document>
